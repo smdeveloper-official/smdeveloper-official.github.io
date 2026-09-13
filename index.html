@@ -333,6 +333,58 @@ header{
         0 0 15px rgba(180,100,255,.8);
 }
 
+.nav-links a{
+    width:42px;
+    height:42px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:13px;
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.07);
+    color:#bdb7c8;
+    transition:transform .3s ease, color .3s ease, background .3s ease,
+               border-color .3s ease, box-shadow .3s ease;
+}
+
+.nav-links a svg{
+    width:20px;
+    height:20px;
+    display:block;
+}
+
+.nav-links a:hover{
+    transform:translateY(-2px);
+    color:#fff;
+    background:rgba(130,60,220,.14);
+    border-color:rgba(180,100,255,.35);
+    box-shadow:
+        0 8px 25px rgba(110,40,220,.25),
+        0 0 18px rgba(170,90,255,.18);
+    text-shadow:0 0 15px rgba(180,100,255,.8);
+}
+
+.nav-links a:active{
+    transform:translateY(0) scale(.96);
+}
+
+@media(max-width:800px){
+    .nav-links{
+        display:flex;
+        gap:8px;
+    }
+
+    .nav-links a{
+        width:40px;
+        height:40px;
+    }
+
+    .nav-links a svg{
+        width:19px;
+        height:19px;
+    }
+}
+
 
 /* =========================================================
    HERO
@@ -1198,13 +1250,33 @@ footer strong{
         </a>
 
 
-        <nav class="nav-links">
+        <nav class="nav-links" aria-label="প্রধান নেভিগেশন">
 
-            <a href="#app">অ্যাপ</a>
+            <a href="#app" aria-label="হোম" title="হোম">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 10.5 12 3l9 7.5"/>
+                    <path d="M5.5 9.5V21h13V9.5"/>
+                    <path d="M9.5 21v-6h5v6"/>
+                </svg>
+            </a>
 
-            <a href="#download">ডাউনলোড</a>
+            <a href="#download" aria-label="ডাউনলোড" title="ডাউনলোড">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 3v12"/>
+                    <path d="m7 10 5 5 5-5"/>
+                    <path d="M5 21h14"/>
+                </svg>
+            </a>
 
-            <a href="#gift">উপহার</a>
+            <a href="#gift" aria-label="উপহার" title="উপহার">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M20 12v9H4v-9"/>
+                    <path d="M2 7h20v5H2z"/>
+                    <path d="M12 7v14"/>
+                    <path d="M12 7H7.5a2.5 2.5 0 1 1 0-5C10 2 12 7 12 7Z"/>
+                    <path d="M12 7h4.5a2.5 2.5 0 1 0 0-5C14 2 12 7 12 7Z"/>
+                </svg>
+            </a>
 
         </nav>
 
@@ -1257,7 +1329,7 @@ footer strong{
 
             <a
                 class="download-btn"
-                href="https://mega.nz/file/3GJXDT7A#XbIQWU2IMUrcsP6cKWGL7lbser2RuDazaazCnnSztrM"
+                href="https://drive.google.com/file/d/1jaeubMRPBBFhEueniw8rnqg1oTblhqa8/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
             >
@@ -1393,7 +1465,7 @@ footer strong{
 
             <a
                 class="download-btn"
-                href="https://mega.nz/file/3GJXDT7A#XbIQWU2IMUrcsP6cKWGL7lbser2RuDazaazCnnSztrM"
+                href="https://drive.google.com/file/d/1jaeubMRPBBFhEueniw8rnqg1oTblhqa8/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
             >
@@ -1540,7 +1612,7 @@ footer strong{
 
 
     <a
-        href="https://mega.nz/file/3GJXDT7A#XbIQWU2IMUrcsP6cKWGL7lbser2RuDazaazCnnSztrM"
+        href="https://drive.google.com/file/d/1jaeubMRPBBFhEueniw8rnqg1oTblhqa8/view?usp=sharing"
         target="_blank"
         rel="noopener noreferrer"
     >
